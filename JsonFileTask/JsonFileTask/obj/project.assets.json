@@ -60,11 +60,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pc\\OneDrive\\Masaüstü\\JsonFileTask\\JsonFileTask\\JsonFileTask.csproj",
+      "projectUniqueName": "C:\\Users\\pc\\OneDrive\\Masaüstü\\JsonTask\\JsonFileTask\\JsonFileTask\\JsonFileTask.csproj",
       "projectName": "JsonFileTask",
-      "projectPath": "C:\\Users\\pc\\OneDrive\\Masaüstü\\JsonFileTask\\JsonFileTask\\JsonFileTask.csproj",
+      "projectPath": "C:\\Users\\pc\\OneDrive\\Masaüstü\\JsonTask\\JsonFileTask\\JsonFileTask\\JsonFileTask.csproj",
       "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pc\\OneDrive\\Masaüstü\\JsonFileTask\\JsonFileTask\\obj\\",
+      "outputPath": "C:\\Users\\pc\\OneDrive\\Masaüstü\\JsonTask\\JsonFileTask\\JsonFileTask\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",

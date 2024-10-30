@@ -16,7 +16,7 @@ internal class Program
         string result = JsonConvert.SerializeObject(names);
 
         string path = Path.GetFullPath(Path.Combine(@"..", "..", "..", "Files", "Name.json"));
-        
+
 
         using (StreamWriter sw = new StreamWriter(path))
         {
@@ -26,18 +26,21 @@ internal class Program
 
         void Additem(string name)
         {
-            using (StreamReader sr = new StreamReader(path))
-            {
-               string newNames =  sr.ReadToEnd();
-            }
+            StreamReader sr = new StreamReader(path);
 
-            names.Add(name);
-            string newResult = JsonConvert.SerializeObject(names);
-            
-             using (StreamWriter sw = new StreamWriter(path))
-           
-            {
+            string oldNames = sr.ReadToEnd();
 
+            sr.Close();
+
+            var newNames = JsonConvert.DeserializeObject<List<string>>(oldNames);
+            newNames.Add(name);
+
+            string newResult = JsonConvert.SerializeObject(newNames);
+
+            using (StreamWriter sw = new StreamWriter(path))
+
+            {
+                
                 sw.WriteLine(newResult);
             }
 
@@ -45,19 +48,51 @@ internal class Program
 
         Additem("abbas");
 
-        void Delete(int index)
+        
+
+        void Delete(string name)
         {
 
             StreamReader sr = new StreamReader(path);
-            
-                sr.ReadToEnd();
-                 sr.Close();
 
-            names.FindAll(x => x.Equals(x[index]));
-            
+            string oldNames = sr.ReadToEnd();
+
+            sr.Close();
+
+            var newNames = JsonConvert.DeserializeObject<List<string>>(oldNames);
+            newNames.Remove(name);
+
+
+
+            string newResult = JsonConvert.SerializeObject(newNames);
+            using (StreamWriter sw = new StreamWriter(path))
+
+            {
+                sw.WriteLine(newResult);
+            }
+
+
         }
-       
+        Delete("Ayxan");
 
+
+        bool Search(string name)
+        {
+            StreamReader sr = new StreamReader(path);
+            string searchNames = sr.ReadToEnd();
+            sr.Close();
+            var listofSearch = JsonConvert.DeserializeObject<List<string>>(searchNames);
+            
+
+         return listofSearch.Contains(name);
+           
+
+
+            
+
+        }
+
+        Console.WriteLine(Search("abbas")); ;
 
 
     }

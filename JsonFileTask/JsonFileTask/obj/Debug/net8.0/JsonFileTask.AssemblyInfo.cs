@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JsonFileTask")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b7f7fd7178ca359654af30ed24e5057267fd2187")]
 [assembly: System.Reflection.AssemblyProductAttribute("JsonFileTask")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JsonFileTask")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
